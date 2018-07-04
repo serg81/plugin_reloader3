@@ -11,7 +11,7 @@
 [general]
 name=Plugin Reloader
 qgisMinimumVersion=1.8
-qgisMaximumVersion=2.98
+qgisMaximumVersion=3.98
 description=Reloads a chosen plugin in one click
 about=This tool is only useful for Python Plugin Developers!
 version=0.6.4

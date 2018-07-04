@@ -14,32 +14,33 @@
 # *   (at your option) any later version.                                   *
 # *                                                                         *
 # ***************************************************************************
+from __future__ import absolute_import
 
 def name():
-  return "Plugin reloader"
+    return "Plugin reloader"
 
 def version():
-  return "Version 0.6.4"
+    return "Version 0.6.4"
 
 def description():
-  return "Reloads a chosen plugin in one click (only useful for Python Plugin Developers)"
+    return "Reloads a chosen plugin in one click (only useful for Python Plugin Developers)"
 
 def qgisMinimumVersion():
-  return "1.8"
+    return "1.8"
 
 def experimental():
-  return True
+    return True
 
 def author():
-  return "Borys Jurgiel"
+    return "Borys Jurgiel"
 
 def authorName():
-  return author()
+    return author()
 
 def email():
-  return "qgis at borysjurgiel dot pl"
+    return "qgis at borysjurgiel dot pl"
 
 
 def classFactory(iface):
-  from reloader_plugin import ReloaderPlugin
-  return ReloaderPlugin(iface)
+    from .reloader_plugin import ReloaderPlugin
+    return ReloaderPlugin(iface)
