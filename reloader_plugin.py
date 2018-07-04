@@ -92,7 +92,7 @@ def currentPlugin():
     if SIPv2:
       return unicode(settings.value('/PluginReloader/plugin', '', type=str))
     else:
-      return unicode(settings.value('/PluginReloader/plugin', QVariant('')))
+      return unicode(settings.value('/PluginReloader/plugin', ''))
 
 
 class ConfigureReloaderDialog (QDialog, Ui_ConfigureReloaderDialogBase):
@@ -207,7 +207,7 @@ class ReloaderPlugin(QObject):
       if SIPv2:
         settings.setValue('/PluginReloader/plugin', plugin)
       else:
-        settings.setValue('/PluginReloader/plugin', QVariant(plugin))
+        settings.setValue('/PluginReloader/plugin', plugin)
       self.actionRun.setWhatsThis(u"Reload plugin: %s" % plugin)
       self.actionRun.setText(u"Reload plugin: %s" % plugin)
     # call the reloading immediately - note that it may cause a loop!!
